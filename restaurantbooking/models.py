@@ -47,6 +47,17 @@ class Reservation(models.Model):
                                         '<br>please call us on 021 4569 782')
     date = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES, default="12 PM")
+    comment = models.CharField(max_length=100, help_text='Please let us know if you have any special requirements')
     
     def __str__(self):
-        return f"{self.user.name} | day: {self.day} | time: {self.time}"
+        return self.name
+
+
+class SignUp(models.Model):
+   
+    first_name = models.CharField(max_length=60, null=True, blank=True)
+    last_name = models.CharField(max_length=60, null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+
+    def __str__(self):
+        return self.first_name

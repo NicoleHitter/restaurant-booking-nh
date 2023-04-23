@@ -1,10 +1,15 @@
 from django.contrib import admin
-from .models import Reservation
-from django_summernote.admin import SummernoteModelAdmin
+from .models import Reservation, SignUp
 
 
 @admin.register(Reservation)
-class ReservationAdmin(SummernoteModelAdmin):
+class ReservationAdmin(admin.ModelAdmin):
 
-    summernote_fields = ('content',)
+    model = Reservation
+    list_display = ('name', 'email')
 
+@admin.register(SignUp)
+class SignUpAdmin(admin.ModelAdmin):
+    
+    model = SignUp
+    list_display = ('first_name', 'last_name', 'email')
