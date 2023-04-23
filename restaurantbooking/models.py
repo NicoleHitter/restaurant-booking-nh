@@ -1,7 +1,7 @@
-from django import form
 from django.db import models
 from datetime import datetime
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 
@@ -38,20 +38,15 @@ TIME_CHOICES = (
 
 
 class Reservation(models.Model):
-    """
-    Model to be used in the forms.py and views.py for the booking form.
-    It uses the User Foreign Key so that each book will be associated with a
-    specific user.
-    The rest of the information is saved for the booking
-    """
+   
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    email = forms.EmailField(required=True)
-    name = forms.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(null=True, blank=True)
+    name = models.CharField(max_length=100, null=True, blank=True)
     groupsize = models.CharField(max_length=1, choices=GROUPSIZE_CHOICES, default="Group size", help_text='<br>Parties of'
                                         '<br>more than 10,'
                                         '<br>please call us on 021 4569 782')
     date = models.DateField(default=datetime.now)
-    time = models.CharField(max_length=18, choices=TIME_CHOICES, default="12 PM")
+    time = models.CharField(max_length=10, choices=TIME_CHOICES, default="12 PM")
     
     def __str__(self):
         return f"{self.user.name} | day: {self.day} | time: {self.time}"
