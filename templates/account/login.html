@@ -1,12 +1,39 @@
-{% extends "account/base.html" %}
+{% extends "base.html" %}
 
 {% load i18n %}
+{% load account socialaccount %}
 
-{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
-    <h1>{% trans "Verify Your E-mail Address" %}</h1>
 
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+<section id="login" class="login-image">
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 mt-5 offset-md-3">
+        <h2>{% trans "Log In" %}</h2>
+
+        <p>{% blocktrans %}If you do not have an account, click
+          <a href="{{ signup_url }}">here</a> to create one.{% endblocktrans %}</p>
+      </div>
+    </div>
+  
+
+
+    <div class="row">
+      <div class="col-md-3 mt-3 mb-5 offset-md-3">
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="btn btn-success btn-lg" type="submit">{% trans "Log In" %}</button>
+        </form>
+      </div>
+    </div>
+</div>
+</section>
+
 
 {% endblock %}

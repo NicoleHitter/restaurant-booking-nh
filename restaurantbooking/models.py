@@ -40,7 +40,7 @@ TIME_CHOICES = (
 class Reservation(models.Model):
    
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
-    email = models.EmailField(null=True, blank=True)
+    email_address = models.EmailField(null=True, blank=True)
     name = models.CharField(max_length=100, null=True, blank=True)
     group_size = models.CharField(max_length=1, choices=GROUPSIZE_CHOICES, 
                                  default="Group size", 
@@ -61,7 +61,7 @@ class SignUp(models.Model):
    
     first_name = models.CharField(max_length=60, null=True, blank=True)
     last_name = models.CharField(max_length=60, null=True, blank=True)
-    email = models.EmailField(null=True, blank=True)
+    email_address = models.EmailField(null=True, blank=True)
 
     def __str__(self):
         return self.first_name

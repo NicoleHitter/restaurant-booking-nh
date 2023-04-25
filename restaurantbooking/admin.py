@@ -6,10 +6,10 @@ from .models import Reservation, SignUp
 class ReservationAdmin(admin.ModelAdmin):
 
     model = Reservation
-    list_display = ('name', 'email')
+    list_display = ('name', 'email_address')
 
 @admin.register(SignUp)
 class SignUpAdmin(admin.ModelAdmin):
     
     model = SignUp
-    list_display = ('first_name', 'last_name', 'email')
+    list_display = ('first_name', 'last_name', 'email_address')

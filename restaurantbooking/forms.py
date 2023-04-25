@@ -28,10 +28,10 @@ class OnlineForm(ModelForm):
         widget=forms.TextInput(attrs={'placeholder': 'Reservation Name'}),
     )
 
-    email = forms.EmailField(
+    email_address = forms.EmailField(
         label='Email Address',
         required=True,
-        validators=[validators.EmailValidator(message="Invalid Email")],
+        validators=[validators.EmailValidator(message="Invalid Email Address")],
         widget=forms.TextInput(attrs={'placeholder': 'Email Address'}),
     )
 
@@ -71,10 +71,10 @@ class SignUpForm(ModelForm):
         widget=forms.TextInput(attrs={'placeholder': 'Last Name'}),
     )
 
-    email = forms.EmailField(
-        label='Email Adress',
+    email_address = forms.EmailField(
+        label='Email Address',
         required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Email Adress'}),
+        widget=forms.TextInput(attrs={'placeholder': 'Email Address'}),
     )
 
     class Meta:
@@ -82,4 +82,4 @@ class SignUpForm(ModelForm):
         fields from"""
         model = SignUp
         # Tell the form to use all the fields provided
-        fields = ('first_name', 'last_name', 'email')
+        fields = ('first_name', 'last_name', 'email_address')
