@@ -39,14 +39,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'restaurantbooking:reservations' %}">Book a Table</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'restaurantbooking:sign_up' %}">Newsletter</a>
+                </li>
                 <!--The My Bookings and Log out tabs will only appear
                 if the an autherised user is logged in -->
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">My Bookings</a>
+                    <a class="nav-link" href="{% url 'restaurantbooking:my_reservations' %}">My Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 <!--Otherwise they will be asked to either
                 log in or register -->
@@ -55,7 +58,7 @@
                     <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href='account_login' >Login</a>
                 </li>
                 {% endif %}
             </ul>

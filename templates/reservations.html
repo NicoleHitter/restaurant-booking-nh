@@ -16,10 +16,10 @@
 {% else %}
 {% if user.is_authenticated %}
 <section id="reservation" class="book_a_table">
-    <div class="booking_container">
+    <div class="reservation_container">
         <div class="row">
             <div class="col-md-3 mt-5 offset-md-3">
-                <h4 class="stroke">Bookings:</h4>
+                <h4 class="stroke">Reservations:</h4>
                 <form method="POST">
                     {% csrf_token %}
                     {{form.as_p}}
