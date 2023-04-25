@@ -37,7 +37,7 @@
                     <a class="nav-link" href="{% url 'restaurantbooking:home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Book a Table</a>
+                    <a class="nav-link" href="{% url 'restaurantbooking:reservations' %}">Book a Table</a>
                 </li>
                 <!--The My Bookings and Log out tabs will only appear
                 if the an autherised user is logged in -->
@@ -52,7 +52,7 @@
                 log in or register -->
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
+                    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Login</a>

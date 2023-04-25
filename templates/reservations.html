@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if not user.is_authenticated %}
+<section id="login_required" class="book_a_table">
+    <div class="login_container">
+        <div class="row">
+            <div class="col-md-3 mt-5 offset-md-3">
+                <h3>Login Required</h3>
+                <p>Please <a href="{% url 'account_login' %}">Login</a> to continue with your reservation/p>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+{% if user.is_authenticated %}
+<section id="reservation" class="book_a_table">
+    <div class="booking_container">
+        <div class="row">
+            <div class="col-md-3 mt-5 offset-md-3">
+                <h4 class="stroke">Bookings:</h4>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                    <button id="submit-button" class="btn btn-success">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+{% endif %}
+
+{%endblock%}
