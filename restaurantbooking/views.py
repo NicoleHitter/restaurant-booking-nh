@@ -58,3 +58,14 @@ class Confirmation(generic.DetailView):
 
     def get(self, request):
         return render(request, 'confirmation.html')
+
+class SignIn(generic.DetailView):
+    """
+    Renders the Login page in the browser
+    """
+
+    def login_view(self, request):
+        if request.method == "POST":
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            return render(request, 'login.html')
