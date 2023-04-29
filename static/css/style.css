@@ -3,6 +3,13 @@
 body {
     font-family: Aboreto, sans-serif;
     color: #DAA520;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    background-color: #32863A;
 }
 
 .short-logo {
@@ -11,4 +18,29 @@ body {
     font-size: 280%;
     margin-left: 1.2vw;
     line-height: 13vh;
+}
+
+#hero-outer {
+    margin-top: 15%;
+    text-align: center;
+}
+
+.reservation_form {
+    border: 1px solid #DAA520;
+    padding: 3%;
+    margin-left: 30%;
+}
+
+footer {
+    background-color: #2E8B57;
+    width: 100%;
+    height: 9vh;
+    text-align: center;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+    color: #DAA520;
+    margin-top: auto;
 }
