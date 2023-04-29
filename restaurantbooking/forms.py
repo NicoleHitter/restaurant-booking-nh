@@ -1,7 +1,7 @@
 from django.forms import ModelForm
 from django.core import validators
 from django import forms
-from .models import Reservation, SignUp
+from .models import Reservation
 
 
 class DateInput(forms.DateInput):
@@ -49,37 +49,4 @@ class OnlineForm(ModelForm):
         }
 
 
-class SignUpForm(ModelForm):
-    """
-    This form is connected with the Signup view
-    so that visiters to the site can sign up
-    for the restaurants newsletter.
-    It also provides the labels and placeholder
-    text for each field, as wells as the widgets
-    and handles validation where required.
-    """
 
-    first_name = forms.CharField(
-        label='First Name',
-        required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'First Name'}),
-    )
-
-    last_name = forms.CharField(
-        label='Last Name',
-        required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Last Name'}),
-    )
-
-    email_address = forms.EmailField(
-        label='Email Address',
-        required=True,
-        widget=forms.TextInput(attrs={'placeholder': 'Email Address'}),
-    )
-
-    class Meta:
-        """Defines which model to pull the
-        fields from"""
-        model = SignUp
-        # Tell the form to use all the fields provided
-        fields = ('first_name', 'last_name', 'email_address')

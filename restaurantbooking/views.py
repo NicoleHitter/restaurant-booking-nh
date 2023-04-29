@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import FormView
-from .forms import OnlineForm, SignUpForm
+from .forms import OnlineForm
 from .models import Reservation
 
 
@@ -104,7 +104,7 @@ def edit_reservation_view(request, reservation_id):
     they will be redirected to the home page and a
     confimation message will appear.
     """
-
+    
     if request.user.is_authenticated:
         reservation = get_object_or_404(Reservation, id=reservation_id)
         if reservation.user == request.user:
@@ -147,32 +147,3 @@ def delete_reservation(request, reservation_id):
             messages.error(request, 'You do not have the authority to access this page!')
             return redirect('/')
 
-class SignUpView(FormView):
-    """
-    Renders the Sign up form page in the browser
-    Using the SignUpForm created in the forms.py file
-    When the Sign up form is completed and submitted
-    the user will receive a message to say it was
-    successful.
-    """
-    template_name = 'sign_up.html'
-    form_class = SignUpForm
-
-    def sign_up_view(self, request):
-        return render(request, 'sign_up.html')
-
-    def post(self, request):
-        """
-        Uses the SignUpForm from forms.py
-        Checks if all the infromation in valid
-        and then saves it to the database.
-        Once the information is saved the site
-        visitor will receive a pop up message
-        """
-        form = SignUpForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-        # Pops up a message to the site visitor when their information
-        # has been saved
-        messages.success(request, 'Thank you for signing up to our newsletter')
-        return redirect('/')

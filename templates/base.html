@@ -39,9 +39,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'restaurantbooking:reservations' %}">Book a Table</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'restaurantbooking:sign_up' %}">Newsletter</a>
-                </li>
                 <!--The My Bookings and Log out tabs will only appear
                 if the an autherised user is logged in -->
                 {% if user.is_authenticated %}
