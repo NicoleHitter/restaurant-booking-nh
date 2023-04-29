@@ -7,6 +7,7 @@ The `urlpatterns` list routes URLs to views. For more information please see:
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.staticfiles.storage import staticfiles_storage
+from django.conf.urls import (handler404, handler500)
 from django.views.generic.base import RedirectView
 
 urlpatterns = [
@@ -15,4 +16,7 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
    
 ]
+
+handler404 = 'restaurantbooking.views.handler404'
+handler500 = 'restaurantbooking.views.handler500'
 

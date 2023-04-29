@@ -1,10 +1,12 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, redirect
 from django.views import generic
 from django.contrib import messages
+from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import FormView
 from .forms import OnlineForm
 from .models import Reservation
+
 
 
 class Home(generic.DetailView):
@@ -148,4 +150,12 @@ def delete_reservation(request, reservation_id):
         else:
             messages.error(request, 'You do not have the authority to access this page!')
             return redirect('/')
+
+def handler404(request, *args, **argv):
+    return render(request, '404.html')
+
+
+def handler500(request, *args, **argv):
+    return render(request, '404.html')
+
 

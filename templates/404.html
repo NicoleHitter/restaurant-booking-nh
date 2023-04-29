@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<main>
+   
+    <div class="container">
+        <header class="text-center">
+            <h1>Page Not Found</h1>
+        </header>
+
+        <div class="card-body text-center p-4">
+            <a href="{% url 'restaurantbooking:home' %}" class="btn btn-primary btn-large mb-3">Back to Home</a>
+            <figure class="text-center">
+                <figcaption>
+                    <h2 class="mb-3">Whoops!</h2>
+                    <p>Where did you go wrong?</p>
+                    <p>Click the above button to start over.</p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</main>
+{% endblock %}
