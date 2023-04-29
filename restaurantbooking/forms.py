@@ -47,6 +47,6 @@ class OnlineForm(ModelForm):
         widgets = {
             'date': DateInput()
         }
-
+        
 
 

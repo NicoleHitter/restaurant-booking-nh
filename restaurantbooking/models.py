@@ -52,6 +52,12 @@ class Reservation(models.Model):
     comment = models.CharField(max_length=100, 
                                help_text='Please let us know if you have any special requirements', 
                                default="Please add your comment here")
+
+
+    class Meta:
+        constraints = [
+                models.UniqueConstraint(fields=['name', 'date', 'time'], name='name of constraint')
+        ]
     
     def __str__(self):
         return self.name
