@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Aboreto&family=Great+Vibes&display=swap');
+
+body {
+    font-family: Aboreto, sans-serif;
+    color: #DAA520;
+}
+
+.short-logo {
+    color: #DAA520;
+    float: left;
+    font-size: 280%;
+    margin-left: 1.2vw;
+    line-height: 13vh;
+}
