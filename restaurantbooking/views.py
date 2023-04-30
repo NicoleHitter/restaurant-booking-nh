@@ -40,6 +40,13 @@ class ReservationView(FormView):
         form = OnlineForm(data=request.POST)
         if form.is_valid():
             reservation = form.save(commit=False)
+            reservation_exists = Reservation.objects.filter(user=request.user, date=reservation.date, time=reservation.time).exists()
+            if reservation_exists:
+                messages.error(request, "Reservation already exists")
+                return render(request, 'reservations.html', {
+                            'form': form
+                            }
+                            )    
             reservation.user = request.user
             reservation.save()
             return render(request, 'confirmation.html')
@@ -113,9 +120,16 @@ def edit_reservation_view(request, reservation_id):
         if reservation.user == current_user:
             if request.method == 'POST':
                 form = OnlineForm(data=request.POST, instance=reservation)
-                if form.is_valid():
-                    form.save()
-                    # Pops up a message to the user when a booking is edited
+                if form.is_valid():                
+                    updated_reservation = form.save(commit=False)
+                    reservation_exists = Reservation.objects.filter(user=request.user, date=updated_reservation.date, time=updated_reservation.time).exclude(id__in=[reservation_id]).exists()
+                    if reservation_exists:
+                        messages.error(request, "Reservation already exists")
+                        return render(request, 'reservations.html', {
+                                    'form': form
+                                    }
+                                    )    
+                updated_reservation.save()
                 messages.success(request, 'Your reservation has been updated')
                 return redirect('/')
         else:
