@@ -16,12 +16,19 @@ body {
     background-color: #32863A;
 }
 
+
+.navbar-collapse {
+    text-align: right;
+    padding-right: 5px;
+}
+
 .short-logo {
     color: #DAA520;
     float: left;
     font-size: 280%;
     margin-left: 1.2vw;
     line-height: 13vh;
+    width: 60vw;
 }
 
 .gen-container {
