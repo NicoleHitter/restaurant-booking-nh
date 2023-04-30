@@ -4,7 +4,7 @@ body {
     font-family: Castoro Titling, sans-serif;
     color: #DAA520;
     min-height: 100vh;
-    display: flex;
+    
     flex-direction: column;
     background-image: url('../images/roses.jpg');
     background-position: center; /* Center the image */
@@ -29,16 +29,14 @@ body {
     background: rgba(152, 69, 161, 0.9);
     text-align: center;
     width: 50%;
-    margin-top: 15%; 
-   
-    
+    margin-top: 15%;     
 }
+
 .sml-container {
     padding-top: 4%;
-    margin-left: 25%;
+    margin-left: 10%;
     height: 50%;
-    
-
+    width: 80%;
 }
 
 .lrg-container {
@@ -47,7 +45,6 @@ body {
     padding: 2%;
     padding-left: 4%;
     text-align: left;
-
 }
 
 .logout-container {
@@ -65,6 +62,7 @@ body {
     border: 1px solid #daa520;
     background: rgba(238, 238, 238, 0.7);
     text-align: center;
+    width:100vw;
 }
 
 .row {
@@ -88,6 +86,50 @@ footer {
 /* a hover effect*/
 .fa:hover {
     opacity: 0.7;
+}
+
+@media screen and (max-width: 950px) {
+    h2, h3, h4 {
+        font-size: 17px; 
+        padding: 10px;
+    }
+    input {
+        font-size: 12px;
+    }
+    .form_size > p {
+        font-size: 12px;
+    }
+    
+    .col-md-5 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .lrg-container {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    .sml-container {
+        padding-top: 4%;
+        width: 80%;
+        margin-left: 10%;
+        height: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    h5 {
+      font-size: 17px;
+    }
+    h6 {
+        font-size: 16px;
+    }
+    
+    .my_reservation_container > p {
+        font-size: 15px;
+    }
 }
 
 
