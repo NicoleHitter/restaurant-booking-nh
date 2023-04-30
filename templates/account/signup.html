@@ -7,18 +7,15 @@
 {% block content %}
 
 <section id="register" class="register-image">
-<div class="square-container">
-  <div class="row">
-    <div class="col-md-3 mt-5 offset-md-3">
+<div class="gen-container lrg-container">
+  
       <h2>{% trans "Register" %}</h2>
 
       <p>{% blocktrans %}Already have an account? Click
         <a href="{{ login_url }}">here</a> to Log in.{% endblocktrans %}</p>
-    </div>
-  </div>
+   
 
-  <div class="row">
-    <div class="col-md-3 mt-3 mb-5 offset-md-3">
+  
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form.as_p }}
@@ -27,8 +24,7 @@
         {% endif %}
         <button class="btn btn-success btn-lg" type="submit">{% trans "Sign Up" %} &raquo;</button>
       </form>
-    </div>
-  </div>
+   
 </div>
 </section>
 

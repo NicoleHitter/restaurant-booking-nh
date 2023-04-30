@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Aboreto&family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
 
 body {
-    font-family: Aboreto, sans-serif;
+    font-family: Castoro Titling, sans-serif;
     color: #DAA520;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url('../images/roses.jpg');
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
 }
 
 .navbar{
@@ -20,9 +24,34 @@ body {
     line-height: 13vh;
 }
 
-#hero-outer {
-    margin-top: 15%;
+.gen-container {
+    border: 1px solid #daa520;
+    background: rgba(152, 69, 161, 0.9);
     text-align: center;
+    width: 50%;
+    margin-top: 15%; 
+   
+    
+}
+.sml-container {
+    padding-top: 4%;
+    margin-left: 25%;
+    height: 50%;
+    
+
+}
+
+.lrg-container {
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 2%;
+    padding-left: 4%;
+    text-align: left;
+
+}
+
+.logout-container {
+    padding-bottom: 4%;
 }
 
 .reservation_form {
@@ -31,16 +60,34 @@ body {
     margin-left: 30%;
 }
 
+.my_reservation_container {
+    color:#8c3a8d;
+    border: 1px solid #daa520;
+    background: rgba(238, 238, 238, 0.7);
+    text-align: center;
+}
+
+.row {
+    margin-left: 10%;
+}
+
 footer {
-    background-color: #2E8B57;
+    background-color: #ceafdb;
     width: 100%;
     height: 9vh;
     text-align: center;
 }
 
 .fa {
+    width: 60px;
     text-align: center;
     text-decoration: none;
-    color: #DAA520;
-    margin-top: auto;
+    color: #5f4e23;
 }
+
+/* a hover effect*/
+.fa:hover {
+    opacity: 0.7;
+}
+
+

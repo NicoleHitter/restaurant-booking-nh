@@ -6,30 +6,22 @@
 
 {% block content %}
 
-<section id="logout" class="logout-image">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 mt-5 offset-md-3">
-        <h3>{% trans "Log Out" %}</h3>
+<section id="logout">
+  <div class="gen-container sml-container logout-container">
 
-        <p>{% blocktrans %}Leaving so soon!
-          <br>
-          Are you sure you want to log out?{% endblocktrans %}</p>
-      </div>
-    </div>
+    <h3>{% trans "Log Out" %}</h3>
 
-    <div class="row">
-      <div class="col-md-3 mt-3 mb-5 offset-md-3">
-        <form method="post" action="{% url 'account_logout' %}">
-          {% csrf_token %}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-          {% endif %}
-          <button class="btn btn-success btn-sm" type="submit">{% trans 'Log Out' %}</button>
-        </form>
+    <p>{% blocktrans %}Leaving so soon!
+      <br>
+      Are you sure you want to log out?{% endblocktrans %}</p>
 
-      </div>
-    </div>
+    <form method="post" action="{% url 'account_logout' %}">
+      {% csrf_token %}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="btn btn-success btn-sm" type="submit">{% trans 'Log Out' %}</button>
+    </form>
   </div>
 </section>
 
