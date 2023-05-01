@@ -13,7 +13,7 @@
 {% if user.is_authenticated %}
 <section id="reservation" class="book_a_table">
     <div class="gen-container lrg-container">
-        <h4 class="stroke">Reservations:</h4>
+        <h4 class="stroke">Make a Reservation:</h4>
         <form method="POST" class="form_size">
             {% csrf_token %}
             {{form.as_p}}

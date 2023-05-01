@@ -73,8 +73,13 @@ body {
 }
 
 .row {
-    margin-left: 10%;
+    width: 100%;
 }
+
+.col-md-5 {
+    margin-left: 5%;
+}
+
 
 footer {
     background-color: #ceafdb;
@@ -107,10 +112,6 @@ footer {
         font-size: 12px;
     }
     
-    .col-md-5 {
-        width: 90%;
-        margin-left: 5%;
-    }
     .lrg-container {
         width: 90%;
         margin-left: 5%;
@@ -125,6 +126,11 @@ footer {
     
 }
 
+@media screen and (max-width: 760px){
+    .col-md-5 {
+        margin-left: 10px;
+    }
+}
 
 @media screen and (max-width: 400px) {
     h5 {
