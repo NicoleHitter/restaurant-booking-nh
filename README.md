@@ -1,19 +1,65 @@
 # Restaurant Booking NH
 ## Introduction
+This website is designed for a fictional bakery restaurant. Through Restaurant Booking NH users are able to create an account, login, make reservations and then manage them for the bakery restaurant. 
+
+This website has been created as the Fourth Milestone project for Code Institute's Full Stack Software Development Diploma and was built using Full Stack Toolkit. The project is using Django, Python, HTML and CSS as main technologies. 
+
 
 ![Responsiveness]()
 
 [Live Version]()
 
-## Uses
+## Site Goals:
+* Allow users to create an account 
+* Allow users to make a reservation at the restaurant
+* Allow users to edit or cancel their booking
+* Allow the restaurant owner to collect a database of customers who have booked with them
 
 
+## Table of contents:
+1. UX
+  * User Stories 
+  * Development Planes 
+    * Strategy
+    * Scope
+    * Structure
+    * Skeleton
+    * Surface
+2. 
+3. 
+4. 
 
-## User Stories 
   
 
 
-## Features
+## UX
+### User Stories 
+This project was developed with agile planning. This means that each individual feature was split first into User Stories for what the user of the website would expect. GitHub issues were used to record all the user stories. As the project progressed each story was then moved from 'To Do' to 'In Progress' to 'Done'.
+
+![User Stories](static/screenshots/UserStories.jpeg)
+
+* As a customer you will:
+  * Be able to create an account.
+  * Be able to select the time and date of reservation.
+  * Be able to select the group size and leave a comment in case they have any special requirements.
+  * Be able to edit their reservation or delete it.
+
+* As a site administrator you will:
+  * Be able to check the number of costumers.
+  * Be able to see details of the customers.
+
+
+### Development Planes
+#### Strategy Plane
+##### Targeted Users
+* A user that wants to reserve a table in the bakery restaurant, who could be an old or a new user of any age group that prefer to use an online booking system. 
+
+##### Site Goals
+* For users to be able to create an account.
+* For users to be able to reserve a table.
+* For users to be able to edit or delete their reservation online.
+
+##### Project Goals 
 ### Existing Features
   1. 
   2. 
