@@ -29,9 +29,6 @@ This website has been created as the Fourth Milestone project for Code Institute
 3. 
 4. 
 
-  
-
-
 ## UX
 ### User Stories 
 This project was developed with agile planning. This means that each individual feature was split first into User Stories for what the user of the website would expect. GitHub issues were used to record all the user stories. As the project progressed each story was then moved from 'To Do' to 'In Progress' to 'Done'.
@@ -50,7 +47,7 @@ This project was developed with agile planning. This means that each individual 
 
 
 ### Development Planes
-#### Strategy Plane
+#### Strategy
 ##### Targeted Users
 * A user that wants to reserve a table in the bakery restaurant, who could be an old or a new user of any age group that prefer to use an online booking system. 
 
@@ -60,6 +57,21 @@ This project was developed with agile planning. This means that each individual 
 * For users to be able to edit or delete their reservation online.
 
 ##### Project Goals 
+* Create a booking website for a bakery that will help facilitate their services and reduce the human workload by having an easy to use booking system which they can access easily. This will bring them a quick way of checking the number of costumers and also they will be able to keep their customers information. 
+* Learn how to create a booking system which has full CRUD functionality.
+
+#### Scope 
+The Scope Plane was about developing website requirements based on the goals set out in the strategy plane.
+* Home page welcome message which immediately tells the user what the site is for.
+* Account registration which will allow for restricted viewing on Editing and Deleting pages and booking an reservation..
+* Fully responsive website, tested across all screen sizes, with navigation for mobile.
+* Ability to create, view, update and delete appointments.
+
+#### Structure
+The information above was then used to create a structure for the website. Below is a site map showing how users can navigate the website intuitively.
+
+
+
 ### Existing Features
   1. 
   2. 
