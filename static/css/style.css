@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     
     flex-direction: column;
-    background-image: url('../images/roses.jpg');
+    background-image: url(https://res.cloudinary.com/dwibbq7wr/image/upload/v1683054368/roses_zt1vfl.jpg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
