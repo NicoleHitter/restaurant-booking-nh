@@ -32,7 +32,7 @@ CLOUDINARY_STORAGE = {
 }
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = ('DEBUGGING' in os.environ)
 
 
 ALLOWED_HOSTS = ['restaurant-booking-nh.herokuapp.com', 'localhost']
