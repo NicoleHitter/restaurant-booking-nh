@@ -1,6 +1,6 @@
 # Restaurant Booking NH
 ## Introduction
-This website is designed for a fictional bakery restaurant. Through Restaurant Booking NH users can create an account, log in, make reservations and then manage them for the bakery restaurant. 
+This website is designed for a fictional bakery restaurant. Through Restaurant Booking NH users can create an account, log in, make reservations and then manage the reservations. 
 
 This website has been created as the Fourth Milestone project for Code Institute's Full Stack Software Development Diploma and was built using Full Stack Toolkit. The project is using Django, Python, HTML and CSS as the main technologies. 
 
@@ -27,10 +27,15 @@ This website has been created as the Fourth Milestone project for Code Institute
     * [Surface](#surface)
 2. [Features](#features)
 3. [Technologies](#technologies)
-4. [Testing](Testing)
+4. [Manual Testing](#manual-testing)
+  * [Responsiveness](#responsiveness)
+  * [Browser Compatibility](#browser-compatibility)
+  * [Lighthouse](#lighthouse)
+  * [Features Testing](#features-testing)
 5. [Validation](#validation)
 6. [Deployment](#deployment)
 7. [Credits](#credits)
+
 
 # UX
 ## User Stories 
@@ -47,7 +52,6 @@ This project was developed with agile planning. This means that each feature was
 * As a site administrator you will:
   * Be able to check the number of custumers.
   * Be able to see details of the customers.
-
 
 ## Development Planes
 ### Strategy
@@ -124,7 +128,6 @@ The font style used is Castoro Titling from Google Fonts.
   ![Footer](/static/doc/screenshots/footer.jpeg)
   The footer section is present on all pages and it includes links to all social media pages. It is useful for the user as it encourages them to keep connected through social media and it also helps the bakery, as it increases publicity.
   
-
 ## Features Left to Implement
   * Automated confirmation emails - emails to be sent out to a user when they have made, edited or cancelled a booking
   * Avoid overbookings - a backend feature that filters through all the bookings at a certain time and makes sure that the number of bookings does not exceed the number of available seats
@@ -172,17 +175,31 @@ For this project, the following technologies were used.
 * Google Dev Tools was used to edit code and check responsiveness before making the changes permanent.
 
 
-# Testing 
+# Manual Testing 
 ## Responsiveness
 Nicoles Sweet Home project looks and works on different browsers and screen sizes. Manual testing was conducted for responsiveness on small, medium and large screens. Elements on all pages respond as intended on all devices.
 
-## Lighthouse Testing
+## Browser Compability
+I have tested that this website works as intended in browsers: 
+* Chrome
+* Firefox
+
+## Lighthouse 
 
 ### Accessibility
 I confirmed that the colors and fonts chosen are easy to read and accessible by running it through Lighthouse in Chrome DevTools.
 ![Accessibility](static/doc/screenshots/lighthouse.jpeg)
 
-## Validation
+## Features Testing
+Manual testing was conducted on the following elements that appear on every page:
+* Test that Logo redirects to home screen.
+* Test that Navbar hamburger toggle works.
+* Test that Navbar login/out button works.
+* Test that Social Links in Footer work and open in a new page.
+* Test that buttons styles respond consistently.
+
+
+# Validation
 * HTML: - No errors were found when passed through the [W3C Validator tool](https://validator.w3.org/#validate_by_input)
 
 * CSS: - No errors were found when passed through the [W3C Validator tool](https://jigsaw.w3.org/css-validator/validator) tool
@@ -235,7 +252,7 @@ The following are the steps I went through to deploy my live site:
   * Press Enter. Your local clone will be created.
 
 
-## Credits
+# Credits
 
 1. [Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
     - This repository was created using the template provided by Code Institute. Also, without the knowledge gained through the coursework, I would not be able to create this site so thank you Code Institute.
