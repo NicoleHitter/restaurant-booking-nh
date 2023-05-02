@@ -5,9 +5,9 @@ This website is designed for a fictional bakery restaurant. Through Restaurant B
 This website has been created as the Fourth Milestone project for Code Institute's Full Stack Software Development Diploma and was built using Full Stack Toolkit. The project is using Django, Python, HTML and CSS as the main technologies. 
 
 
-![Responsiveness]()
+![Responsiveness](static/doc/screenshots/responsiveness.jpeg)
 
-[Live Version]()
+[Live Version](https://restaurant-booking-nh.herokuapp.com/)
 
 ## Site Goals:
 * Allow users to create an account 
@@ -176,6 +176,11 @@ For this project, the following technologies were used.
 ## Responsiveness
 Nicoles Sweet Home project looks and works on different browsers and screen sizes. Manual testing was conducted for responsiveness on small, medium and large screens. Elements on all pages respond as intended on all devices.
 
+## Lighthouse Testing
+
+### Accessibility
+I confirmed that the colors and fonts chosen are easy to read and accessible by running it through Lighthouse in Chrome DevTools.
+![Accessibility](static/doc/screenshots/lighthouse.jpeg)
 
 ## Validation
 * HTML: - No errors were found when passed through the [W3C Validator tool](https://validator.w3.org/#validate_by_input)
