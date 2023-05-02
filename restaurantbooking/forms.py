@@ -31,10 +31,10 @@ class OnlineForm(ModelForm):
     email_address = forms.EmailField(
         label='Email Address',
         required=True,
-        validators=[validators.EmailValidator(message="Invalid Email Address")],
+        validators=[validators.EmailValidator(
+            message="Invalid Email Address")],
         widget=forms.TextInput(attrs={'placeholder': 'Email Address'}),
     )
-
 
     class Meta:
         """Defines which model to pull the
@@ -42,11 +42,8 @@ class OnlineForm(ModelForm):
         model = Reservation
         # Tell the form to use all the fields provided
         fields = '__all__'
-        # Except fot the user field
+        # Except for the user field
         exclude = ('user', )
         widgets = {
             'date': DateInput()
         }
-        
-
-
